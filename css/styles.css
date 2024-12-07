@@ -1,0 +1,1203 @@
+@charset "utf-8";
+@import url("bootstrap-4.4.1.css");
+/* CSS Document */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensure padding and borders are included in width/height calculations */
+}
+
+html {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
+
+
+
+
+
+/* CSS */
+.announcement-bar {
+    width: 100%;
+    background-color: rgb(231, 111, 81); /* Adjust to your branding */
+    color: rgb(255, 255, 255); /* Adjust for contrast */
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif"sans-serif; /* Use your site's font */
+	font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.announcement-bar p {
+    margin: 0;
+}
+
+.announcement-bar a {
+    color: rgb(38, 70, 83); /* Link color in rgb */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.announcement-bar a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 120px; /* Same height as logo-container */
+    background-color: rgb(248, 248, 248); /* Background color */
+    padding: 0 40px; /* Optional padding for spacing */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+.logo-container {
+    height: 120px; /* Adjust the height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1; /* Allow the logo to take up available space */
+}
+
+.logo {
+    max-width: 250px; /* Adjust logo size */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.icon-container {
+    display: flex; /* Horizontal alignment for icons */
+    align-items: center;
+    gap: 15px; /* Space between icons */
+}
+
+.icon {
+    width: 35px; /* Adjust icon size */
+    height: 35px; /* Adjust icon size */
+    cursor: pointer;
+    margin: 0; /* Reset margin for uniformity */
+}
+
+/* Responsive Design */
+
+/* Tablet View (Width ≤ 768px) */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: row; /* Ensure horizontal layout remains */
+        justify-content: space-between;
+        height: auto; /* Allow dynamic height */
+        padding: 10px 20px; /* Adjust padding for smaller screens */
+    }
+
+    .logo-container {
+        flex-grow: 1; /* Ensure the logo stays centered */
+    }
+
+    .logo {
+        max-width: 200px; /* Resize logo for smaller screens */
+    }
+
+    .icon-container {
+        gap: 10px; /* Reduce spacing between icons */
+    }
+}
+
+/* Mobile View (Width ≤ 480px) */
+@media (max-width: 480px) {
+    .header {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    .icon-container {
+        flex: 1; /* Icons take equal space */
+        justify-content: space-between; /* Distribute icons evenly on either side of the logo */
+    }
+
+    .logo {
+        max-width: 150px; /* Smaller logo for mobile */
+    }
+
+    .icon {
+        width: 25px; /* Smaller icons for mobile */
+        height: 25px; /* Maintain aspect ratio */
+    }
+}
+
+
+
+
+
+/* BANNER */
+
+/* Full-bleed banner */
+.banner {
+    width: 100%; /* Full width of the viewport */
+    height: 820px; /* Fixed height */
+    background-image: url("../images/Banner1.jpg"); /* Replace with your image */
+    background-size: cover; /* Cover the entire container */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent repeating the image */
+    display: flex; /* Flexbox for alignment */
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    padding: 0 20px; /* Add padding around the content */
+}
+
+/* Banner content */
+.banner-content {
+    position: relative;
+    max-width: 700px; /* Limit content width for better readability */
+    text-align: left; /* Keep text left-aligned */
+    background-color: rgba(255, 255, 255, 0.8); /* Optional: semi-transparent background for readability */
+    padding: 50px 50px; /* Add space around the content */
+    border-radius: 10px; /* Optional: rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: subtle shadow */
+}
+
+/* Banner content H1 */
+.banner-content h1 {
+    font-family: 'Shantell Sans', cursive; /* Custom font */
+    font-weight: 700; /* Bold text */
+    font-size: 50px; /* Adjust size as needed */
+	color: rgb(38, 70, 83); /* Text color in rgb */
+    margin-bottom: 15px; /* Add spacing below the heading */
+    line-height: 1.2; /* Adjust line height for better readability */
+}
+
+/* Paragraph inside banner content */
+.banner-content p {
+    font-size: 18px; /* Paragraph font size */
+	color: rgb(38, 70, 83); /* Text color in rgb */
+    line-height: 1.5; /* Line spacing for readability */
+    margin-bottom: 20px; /* Add spacing below the paragraph */
+}
+
+/* Button styling */
+.banner-content .btn {
+    display: inline-block;
+    font-size: 18px; /* Button font size */
+    padding: 12px 40px; /* Button padding (wider for readability) */
+    border-radius: 5px; /* Rounded edges */
+	background-color: rgb(231, 111, 81); /* Orange button color in rgb */
+    color: white; /* White text */
+    text-align: center;
+    text-decoration: none;
+    border: none; /* Remove border */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+    white-space: nowrap; /* Prevent button text from wrapping */
+	font-weight: bold;
+}
+
+.banner-content .btn:hover {
+    background-color: rgb(42, 157, 143); /* Greenish color on hover in rgb */
+    color: white;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .banner {
+        height: 70vh; /* Adjust banner height for smaller screens */
+    }
+
+    .banner-content {
+        max-width: 90%; /* Expand content width for smaller screens */
+        padding: 20px; /* Adjust padding */
+    }
+
+    .banner-content h1 {
+        font-size: 28px; /* Reduce heading size */
+    }
+
+    .banner-content p {
+        font-size: 16px; /* Reduce paragraph font size */
+    }
+
+    .banner-content .btn {
+        padding: 10px 30px; /* Adjust button padding */
+    }
+}
+
+/* Responsive adjustments for very small screens */
+@media (max-width: 480px) {
+    .banner-content {
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+
+    .banner-content h1 {
+        font-size: 22px; /* Reduce heading size further */
+    }
+
+    .banner-content p {
+        font-size: 14px; /* Reduce paragraph font size further */
+    }
+
+    .banner-content .btn {
+        font-size: 14px; /* Adjust button text size */
+        padding: 8px 20px; /* Adjust button padding */
+    }
+}
+
+
+
+
+
+
+
+
+
+/* Navigation Bar Styles */
+.navbar {
+    background-color: rgb(42, 157, 143); /* Background color of the navbar in rgb */
+    padding: 10px 0; /* Padding for spacing */
+    display: flex; /* Flexbox for horizontal layout */
+    justify-content: center; /* Centers navigation items horizontally */
+    align-items: center; /* Centers items vertically within the navbar */
+}
+
+.nav-list {
+    list-style-type: none; /* Remove bullet points */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Arrange list items horizontally */
+}
+
+.nav-list li {
+    margin: 0 30px; /* Add spacing between items */
+}
+
+.nav-list a {
+    text-decoration: none; /* Remove underline */
+    color: #FFFFFF; /* Text color */
+    padding: 10px 20px; /* Padding inside the links */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+	font-weight: bold; /* Make text bold */
+}
+
+.nav-list a:hover {
+    background-color: rgb(255, 235, 188); /* Background color on hover in rgb */
+	color: rgb(38, 70, 83); /* Text color in rgb */
+}
+
+
+/* Hamburger Menu */
+.nav-toggle {
+    display: none; /* Hide the checkbox */
+}
+
+.nav-toggle-label {
+    display: none; /* Hide on desktop */
+    font-size: 1.8rem;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0px 0; /* Adjust this value as needed */
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-list {
+        display: none; /* Hide navigation by default */
+        flex-direction: column; /* Stack items vertically */
+        width: 100%; /* Full width for nav items */
+        background-color: rgb(42, 157, 143); /* Updated to RGB */
+        position: absolute; /* Position dropdown below navbar */
+        top: 100%;
+        left: 0;
+        padding: 10px 0;
+        z-index: 1000;
+    }
+
+    .nav-toggle:checked + .nav-toggle-label + .nav-list {
+        display: flex; /* Show navigation when checkbox is checked */
+    }
+
+    .nav-list li {
+        margin: 10px 0; /* Add spacing between stacked items */
+        text-align: center;
+    }
+
+    .nav-toggle-label {
+        display: block; /* Show hamburger menu icon on mobile */
+    }
+}
+
+
+
+/* Separator styling */
+.separator-large {
+    width: 100%; /* Full width */
+    height: 80px; /* Thicker */
+}
+
+.separator {
+    width: 100%; /* Full width */
+    height: 20px; /* Thickness */
+}
+
+/* Responsive Design for Tablets */
+@media (max-width: 768px) { /* Tablets and smaller screens */
+    .separator-large {
+        height: 60px; /* Reduce thickness */
+    }
+
+    .separator {
+        height: 15px; /* Reduce thickness */
+    }
+}
+
+/* Responsive Design for Mobile Phones */
+@media (max-width: 480px) { /* Mobile devices */
+    .separator-large {
+        height: 40px; /* Further reduce thickness */
+    }
+
+    .separator {
+        height: 10px; /* Further reduce thickness */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Row container */
+.row-container {
+    max-width: 1500px; /* Limit the maximum width */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 0 100px; /* Inner spacing */
+    box-sizing: border-box; /* Include padding in total width */
+}
+
+/* Row */
+.row {
+    display: flex;
+    flex-wrap: wrap; /* Allow columns to wrap on smaller screens */
+    gap: 16px; /* Space between columns */
+    margin: 40px 0; /* Space above and below the row */
+}
+
+/* Each column */
+.column {
+    flex: 0 0 calc(25% - 16px); /* 25% width for each column with gap adjustment */
+    box-sizing: border-box; /* Include padding/borders in width */
+    text-align: left; /* Align text to the left */
+    padding: 20px; /* Inner spacing */
+}
+
+/* Image styling */
+.column img {
+    width: 100%; /* Full width of the column */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 4px; /* Optional: Rounded corners */
+    margin-bottom: 30px; /* Space below the image */
+}
+
+/* Title styling */
+.column h3 {
+    font-size: 1.5rem; /* Adjust font size */
+    color: rgb(38, 70, 83); /* Title color */
+    margin-bottom: 20px; /* Space below the title */
+}
+
+/* Paragraph styling */
+.column p {
+    color: rgb(38, 70, 83); /* Text color */
+    margin-top: 0; /* Remove default margin above */
+    margin-bottom: 16px; /* Space below the paragraph */
+    font-size: 1rem; /* Adjust font size for readability */
+}
+
+/* Section Title */
+.next-section {
+    text-align: center; /* Center the title */
+    margin-top: 20px; /* Space above the section */
+}
+
+.section-title {
+    font-size: 2rem; /* Default font size for medium to large screens */
+    color: rgb(38, 70, 83); /* Title color */
+    margin: 0; /* Remove default margin */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) { /* Tablet and smaller screens */
+    .column {
+        flex: 0 0 100%; /* Columns stack to full width */
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    .column img {
+        margin-bottom: 16px; /* Adjust spacing below the image */
+    }
+
+    .column h3 {
+        margin-bottom: 10px; /* Adjust spacing below the title */
+    }
+
+    .column p {
+        margin-bottom: 12px; /* Adjust spacing below paragraphs */
+    }
+}
+
+@media (max-width: 480px) { /* Mobile devices */
+    .row-container {
+        padding: 0 20px; /* Reduce padding for small screens */
+    }
+
+    .column h3 {
+        font-size: 1rem; /* Smaller font size for mobile */
+    }
+
+    .column p {
+        font-size: 0.85rem; /* Smaller font size for mobile paragraphs */
+    }
+}
+
+
+
+
+
+
+/* Section styling */
+.call-to-action {
+    height: 400px; /* Set the height of the section */
+    background-color: rgb(231, 111, 81); /* Set the background color */
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Horizontally center content */
+    align-items: center; /* Vertically center content */
+    text-align: center; /* Center-align text */
+    color: #fff; /* Text color */
+}
+
+/* Content inside the section */
+.call-to-action .content {
+    max-width: 600px; /* Limit content width */
+    padding: 20px; /* Add inner spacing */
+}
+
+/* Button styling */
+.call-to-action .button {
+    display: inline-block; /* Make the button inline but with block properties */
+    margin-top: 20px; /* Add space above the button */
+    padding: 10px 20px; /* Button size */
+    background-color: rgb(255, 255, 255); /* Button background color */
+	color: rgb(38, 70, 83); /* Button text color */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 20px; /* Button text size */
+    font-weight: bold;
+    transition: all 0.3s ease; /* Smooth hover transition */
+}
+
+/* Button hover effect */
+.call-to-action .button:hover {
+    background-color: rgb(42, 157, 143); /* Change background color on hover */
+    color: #fff; /* Change text color on hover */
+}
+
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .call-to-action .content h2 {
+        font-size: 24px; /* Reduce font size for headings */
+        line-height: 1.3; /* Adjust line spacing */
+    }
+
+    .call-to-action .content p {
+        font-size: 16px; /* Reduce font size for paragraph */
+        line-height: 1.5; /* Maintain readability */
+    }
+}
+
+/* Responsive adjustments for very small screens (e.g., phones) */
+@media (max-width: 480px) {
+    .call-to-action .content h2 {
+        font-size: 20px; /* Further reduce font size for smaller phones */
+        line-height: 1.2; /* Adjust line spacing */
+    }
+
+    .call-to-action .content p {
+        font-size: 14px; /* Smaller font size for paragraphs */
+        line-height: 1.4; /* Maintain readability */
+    }
+}
+
+
+
+/* Footer container */
+.app-footer {
+    background-color: rgb(255, 255, 255); /* Button background color */
+    color: rgb(38, 70, 83); /* Button text color */
+    padding: 40px 20px; /* Spacing inside footer */
+    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif"sans-serif; /* Font style */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between; /* Space out the columns */
+    align-items: flex-start; /* Align content at the top */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    max-width: 1200px; /* Limit footer width */
+    margin: 0 auto; /* Center the footer */
+}
+
+/* Footer logo */
+.footer-logo img {
+    width: 150px; /* Adjust logo size */
+    margin-bottom: 20px;
+	margin-right: 150px;
+}
+
+/* Footer columns */
+.footer-column {
+    flex: 0 0 25%; /* Set column width */
+    margin-bottom: 20px; /* Add space between rows on smaller screens */
+}
+
+.footer-column h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+    color: rgb(38, 70, 83); /* Button text color */
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-column ul li a:hover {
+    color: rgb(38, 70, 83); /* Button text color */
+}
+
+/* Social media icons */
+.social-icons a {
+    margin-right: 10px; /* Space between icons */
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 24px; /* Icon size */
+    height: 24px; /* Icon size */
+    filter: none; /* Removes the color inversion */
+    transition: transform 0.3s ease; /* Smooth hover effect (scale, not color) */
+}
+
+.social-icons img:hover {
+    transform: scale(1.1); /* Slightly enlarges the icon on hover */
+}
+
+
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Stack columns vertically */
+        align-items: center; /* Center content horizontally */
+        text-align: center; /* Center text for columns */
+    }
+
+    .footer-column {
+        flex: 1 1 100%; /* Make each column take full width */
+        margin-bottom: 20px; /* Add spacing between columns */
+    }
+
+    .footer-logo img {
+        margin-right: 0; /* Remove right margin for logo */
+        margin-bottom: 20px; /* Add spacing below logo */
+    }
+
+    .social-icons {
+        justify-content: center; /* Center social icons */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .app-footer {
+        padding: 20px 10px; /* Reduce padding for small screens */
+    }
+
+    .footer-column h3 {
+        font-size: 16px; /* Adjust heading size for better fit */
+    }
+
+    .footer-column ul li a {
+        font-size: 12px; /* Smaller font size for links */
+    }
+
+    .social-icons img {
+        width: 20px; /* Smaller icon size for compact view */
+        height: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+		
+		
+/* Contact Us Section */
+.contact {
+    color: rgb(38, 70, 83); /* Button text color */
+}
+
+/* Headings */
+.contact h1 {
+    color: rgb(38, 70, 83); /* Button text color */
+    font-size: 2.5rem; /* Optional: Adjust font size */
+}
+
+/* Paragraphs */
+.contact p {
+    color: rgb(38, 70, 83); /* Button text color */
+    font-size: 1.2rem; /* Optional: Adjust font size for readability */
+}
+
+/* Form Labels */
+.contact label {
+   	color: rgb(38, 70, 83); /* Button text color */
+    font-weight: bold; /* Optional: Make labels bold */
+}
+
+/* Form Inputs and Textarea Placeholder */
+.contact .form-control::placeholder {
+    color: #264653; /* Placeholder text color */
+    opacity: 0.7; /* Optional: Adjust opacity for better contrast */
+}
+
+
+#contact-submit-btn {
+  	background-color: #E76F51 !important; /* Custom background color */
+    color: white !important; /* Text color */
+    border: none !important; /* Remove border */
+    padding: 15px 20px !important; /* Button padding */
+    border-radius: 5px !important; /* Rounded corners */
+    font-size: 1rem !important; /* Font size */
+    cursor: pointer !important; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease !important; /* Smooth hover transition */
+	font-weight: bold;
+}
+
+
+#contact-submit-btn:hover {
+    background-color: rgb(42, 157, 143) !important; /* Hover background color */
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .contact {
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+
+    #contact-submit-btn {
+        font-size: 0.9rem; /* Adjust button size */
+        padding: 8px 16px; /* Adjust button padding */
+    }
+}
+
+
+
+
+
+
+
+	/* FULL BLEED IMAGE */
+	
+	.full-bleed-image {
+    width: 100%; /* Full viewport width */
+    height: 760px; /* Full viewport height */
+    background-image: url("../images/banner.jpg");
+    background-size: cover; /* Ensure the entire image is visible */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent repeating the image */
+	align-items: center; /* Vertically center the image */
+    justify-content: center; /* Horizontally center the image */
+    overflow: hidden; /* Prevents any overflow */
+}
+
+
+	/* Responsive adjustments for tablets and mobile FULL BLEED IMAGE*/
+@media (max-width: 1024px) { /* Tablet screens and smaller */
+    .full-bleed-image {
+        min-height: 600px; /* Adjust height for tablets */
+		height: auto; /* Allow dynamic height */
+        background-size: cover; /* Ensure the entire image is visible without stretching */
+		background-position: center; /* Keep the image centered */
+
+    }
+}
+
+@media (max-width: 768px) { /* Mobile screens */
+    .full-bleed-image {
+        height: auto; /* Allow dynamic height */
+        background-size: cover; /* Ensure the entire image is visible without stretching */
+        min-height: 400px; /* Set a minimum height for consistency */
+        background-position: center; /* Keep the image centered */
+    }
+}
+	
+	
+
+
+
+
+/* Styling for the GIF mockup section */
+.mockup-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Spacing between mockup containers */
+    padding: 20px 0; /* Add padding around the section */
+    align-items: center; /* Center all containers horizontally */
+    justify-content: center; /* Center all containers vertically */
+    position: relative; /* Allow pseudo-elements to position relative to this container */
+    overflow: visible; /* Allow shapes to extend outside the container */
+}
+
+/* Individual mockup container styling */
+.mockup-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center content horizontally within the container */
+    gap: 0px; /* Space between GIF and description */
+    max-width: 1200px; /* Optional: Limit the width of each container */
+    width: 100%; /* Ensure responsiveness */
+}
+
+/* Styling for the GIF */
+.mockup-container .gif img {
+    max-width: 80%;
+    height: auto;
+   
+}
+
+/* Styling for the description */
+.mockup-container .description {
+    flex: 1; /* Allow the description to take up available space */
+    text-align: left; /* Align text content to the left */
+    margin: 0; /* Center the description block horizontally */
+    max-width: 90%; /* Optional: Limit the block width */
+    color: rgb(38, 70, 83); /* Set text color to dark blue */
+}
+
+/* Description heading and paragraph styling */
+.mockup-container .description h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px; /* Space below the title */
+    color: rgb(38, 70, 83); /* Set heading color to dark blue */
+}
+
+.mockup-container .description p {
+    font-size: 1rem;
+    line-height: 1.5; /* Improve readability */
+    color: rgb(38, 70, 83); /* Set paragraph color to dark blue */
+}
+
+
+
+/* Shape 1 */
+.mockup-section::before {
+    content: '';
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background: rgba(50, 115, 220, 0.2);
+    border-radius: 50%;
+    top: 10%;
+    left: 20%;
+    animation: float-shape 8s infinite ease-in-out;
+    z-index: -1; /* Place behind content */
+}
+
+/* Shape 2 */
+.mockup-section::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 100, 150, 0.2); /* Different color for variety */
+    border-radius: 50%;
+    bottom: 15%;
+    right: 10%;
+    animation: float-shape 10s infinite ease-in-out;
+    z-index: -1;
+}
+
+/* Shape 3 */
+.mockup-section::after {
+    content: '';
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background: rgba(100, 200, 100, 0.2); /* Green for variety */
+    border-radius: 50%;
+    top: 50%;
+    left: 40%;
+    animation: float-shape 10s infinite ease-in-out;
+    z-index: -1;
+}
+
+/* Shape 4 */
+.mockup-section div:nth-child(2)::before {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: rgba(200, 150, 50, 0.2); /* Yellow for variety */
+    border-radius: 50%;
+    top: 75%;
+    left: 10%;
+    animation: float-shape 12s infinite ease-in-out;
+    z-index: -1;
+}
+
+/* Shape 5 */
+.mockup-section div:nth-child(3)::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: rgba(150, 50, 200, 0.2); /* Purple for variety */
+    border-radius: 50%;
+    bottom: 5%;
+    right: 20%;
+    animation: float-shape 14s infinite ease-in-out;
+    z-index: -1;
+}
+
+
+/* Shape 6 */
+.mockup-section div:nth-of-type(2)::after {
+    content: '';
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    background: rgba(42, 157, 143, 0.2); /* Primary Color: Teal */
+    border-radius: 50%;
+    top: 20%;
+    left: -5%; /* Slightly outside the left side */
+    animation: float-shape 8s infinite ease-in-out;
+    z-index: -1;
+}
+
+/* Shape 7 */
+.mockup-section div:nth-of-type(3)::before {
+    content: '';
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    background: rgba(233, 196, 106, 0.2); /* Primary Color: Yellow */
+    border-radius: 50%;
+    top: 40%;
+    right: 0%; /* Slightly outside the right side */
+    animation: float-shape 10s infinite ease-in-out;
+    z-index: -1;
+}
+
+/* Shape 8 */
+.mockup-section div:nth-of-type(4)::after {
+    content: '';
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background: rgba(244, 162, 97, 0.2); /* Primary Color: Orange */
+    border-radius: 50%;
+    bottom: 20%;
+    left: -15%; /* Far left side */
+    animation: float-shape 12s infinite ease-in-out;
+    z-index: -1;
+}
+
+/* Shape 9 */
+.mockup-section div:nth-of-type(5)::before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: rgba(187, 228, 218, 0.2); /* Secondary Color: Light Teal */
+    border-radius: 50%;
+    top: 15%;
+    right: -20%; /* Far right side */
+    animation: float-shape 14s infinite ease-in-out;
+    z-index: -1;
+}
+
+/* Shape 10 */
+.mockup-section div:nth-of-type(6)::after {
+    content: '';
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background: rgba(255, 235, 188, 0.2); /* Secondary Color: Cream */
+    top: 5%;
+    left: -10%; /* Left edge */
+    border-radius: 50%;
+    animation: float-shape 16s infinite ease-in-out;
+    z-index: -1;
+}
+
+/* Shape 11 */
+.mockup-section div:nth-of-type(7)::before {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 214, 200, 0.2); /* Secondary Color: Light Pink */
+    bottom: 10%;
+    right: -15%; /* Far right side */
+    border-radius: 50%;
+    animation: float-shape 6s infinite ease-in-out;
+    z-index: -1;
+}
+
+/* Shape 12 */
+.mockup-section div:nth-of-type(8)::after {
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: rgba(42, 157, 143, 0.2); /* Primary Color: Teal */
+    top: 25%;
+    left: -20%; /* Far left side */
+    border-radius: 50%;
+    animation: float-shape 8s infinite ease-in-out;
+    z-index: -1;
+}
+
+/* Shape 13 */
+.mockup-section div:nth-of-type(9)::before {
+    content: '';
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    background: rgba(233, 196, 106, 0.2); /* Primary Color: Yellow */
+    top: 60%;
+    right: -5%; /* Right edge */
+    border-radius: 50%;
+    animation: float-shape 10s infinite ease-in-out;
+    z-index: -1;
+}
+
+/* Shape 14 */
+.mockup-section div:nth-of-type(10)::after {
+    content: '';
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background: rgba(244, 162, 97, 0.2); /* Primary Color: Orange */
+    bottom: 15%;
+    left: -15%; /* Left edge */
+    border-radius: 50%;
+    animation: float-shape 12s infinite ease-in-out;
+    z-index: -1;
+}
+
+/* Shape 15 */
+.mockup-section div:nth-of-type(11)::before {
+    content: '';
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    background: rgba(187, 228, 218, 0.2); /* Secondary Color: Light Teal */
+    bottom: 5%;
+    right: -20%; /* Far right side */
+    border-radius: 50%;
+    animation: float-shape 14s infinite ease-in-out;
+    z-index: -1;
+}
+
+
+
+
+
+/* Additional shapes using nth-of-type */
+.mockup-section div:nth-of-type(1)::before {
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: rgba(100, 200, 100, 0.2);
+    border-radius: 50%;
+    top: 30%;
+    left: 50%;
+    animation: float-shape 12s infinite ease-in-out;
+    z-index: -1;
+}
+
+.mockup-section div:nth-of-type(1)::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: rgba(200, 150, 50, 0.2);
+    border-radius: 50%;
+    top: 60%;
+    left: 15%;
+    animation: float-shape 6s infinite ease-in-out;
+    z-index: -1;
+}
+
+/* Floating animation */
+@keyframes float-shape {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Responsive behavior for smaller devices */
+@media (max-width: 768px) {
+    .mockup-container {
+        flex-direction: column; /* Stack GIF and description vertically */
+        text-align: center; /* Center-align text block */
+    }
+
+    .mockup-container .gif img {
+        max-width: 100%; /* Scale GIF to full width */
+        height: auto; /* Ensure aspect ratio */
+        margin: 0 auto; /* Center the GIF */
+		transform: translateX(-10px); /* Move the GIF 10px to the left */
+    }
+
+    .mockup-container .description {
+        text-align: left; /* Keep the text left-aligned */
+        margin: 0 auto; /* Center the description block horizontally */
+    }
+
+    .mockup-container .description h2 {
+        font-size: 1.4rem; /* Adjust font size for smaller screens */
+    }
+
+    .mockup-container .description p {
+        font-size: 1rem; /* Adjust paragraph font size */
+    }
+}
+
+@media (max-width: 480px) {
+    .mockup-container .gif img {
+        max-width: 100%; /* Ensure GIF takes the full width of the container */
+        height: auto; /* Maintain aspect ratio */
+        margin: 0 auto; /* Center the GIF */
+		transform: translateX(-15px);
+    }
+
+    .mockup-container .description {
+        text-align: left; /* Keep the text left-aligned */
+        margin: 0 auto; /* Center the description block horizontally */
+        max-width: 95%; /* Adjust width for smaller screens */
+    }
+
+    .mockup-container .description h2 {
+        font-size: 1.5rem; /* Adjust font size for smaller screens */
+    }
+
+    .mockup-container .description p {
+        font-size: 1.1rem; /* Slightly increase paragraph font size for readability */
+        line-height: 1.6; /* Adjust line height */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+.scrolling-text-container {
+    position: absolute; /* Position relative to the viewport */
+    left: 0; /* Start at the very left */
+    right: 0; /* Extend to the very right */
+    width: 100%; /* Ensure the container spans the full width of the parent */
+    overflow: hidden; /* Hide overflowing content */
+    background-color: rgb(231, 111, 81); /* Orange background color */
+    padding: 30px 0; /* Bar height */
+    box-sizing: border-box; /* Include padding in the width calculation */
+    margin-bottom: 100px; /* Add extra space below the bar */
+}
+
+.scrolling-wrapper {
+    display: flex; /* Horizontal alignment */
+    animation: scroll-text 30s linear infinite; /* Slow down the animation */
+    width: max-content; /* Ensure children determine the width */
+}
+
+.scrolling-text {
+    white-space: nowrap; /* Prevent text wrapping */
+    font-size: 1.5rem; /* Larger text */
+    font-weight: bold; /* Bold text */
+    color: #ffffff; /* White text */
+    margin-right: 50px; /* Space between repeated items */
+}
+
+@keyframes scroll-text {
+    0% {
+        transform: translateX(0); /* Start fully visible */
+    }
+    100% {
+        transform: translateX(-50%); /* Move completely off-screen and loop seamlessly */
+    }
+}
+
+@media (max-width: 768px) {
+    .scrolling-text {
+        font-size: 1.2rem; /* Adjust font size for smaller screens */
+    }
+    .scrolling-text-container {
+        padding: 20px 0; /* Adjust bar height for smaller devices */
+        margin: 0 0 30px 0; /* Adjust space below for smaller screens */
+    }
+}
+
+
+
+
+
